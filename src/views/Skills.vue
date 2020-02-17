@@ -33,7 +33,11 @@
           no-gutters
           class="mt-12"
         >
-          <v-col md="12">
+          <v-col
+            md="12"
+            sm="12"
+            cols="12"
+          >
             <v-tabs-items
               v-model="tab"
               v-for="item in items"
@@ -49,13 +53,13 @@
                 >
                   <v-col
                     cols="3"
-                    sm="3"
+                    sm="1"
                     md="1"
                   >
                     <v-img
                       :src="s.src"
                       width="38"
-                      class="ml-6"
+                      class="margleft"
                     ></v-img>
                   </v-col>
                   <v-col
@@ -228,5 +232,13 @@ export default {
 
 .basil--text {
   color: #104efb !important;
+}
+.margleft {
+  margin-left: 24px;
+}
+@media only screen and (max-width: 1000px) and (min-width: 650px) {
+  .margleft {
+    margin-left: 0px;
+  }
 }
 </style>

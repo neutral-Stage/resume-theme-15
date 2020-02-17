@@ -10,7 +10,7 @@
         <v-col
           md="5"
           cols="12"
-          sm="6"
+          sm="12"
           class="px-6"
         >
           <v-img src="/pic/port1.png">
@@ -20,7 +20,7 @@
         <v-col
           md="5"
           cols="12"
-          sm="6"
+          sm="12"
           class="px-6"
         >
           <v-img src="/pic/port2.png">
@@ -38,6 +38,7 @@
     >
       <v-col
         md="2"
+        sm="6"
         class="navblade py-6"
         style="text-align: center;"
       >

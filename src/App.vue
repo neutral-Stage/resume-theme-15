@@ -33,7 +33,7 @@
                 />
               </v-avatar>
               <v-avatar
-                class="profile ma-auto hidden-md-and-up"
+                class="profile  hidden-md-and-up"
                 size="100"
               >
                 <img
@@ -50,8 +50,8 @@
               class="detail"
             >
 
-              <div class="headline white--text ">Jennifer lopez</div>
-              <div class="subtitle-1 white--text">Web Designer</div>
+              <div class="name white--text ">Jennifer lopez</div>
+              <div class="job ">Web Designer</div>
               <v-row
                 class="hidden-sm-and-down mt-2"
                 no-gutters
@@ -72,26 +72,53 @@
                   ></v-img>
                 </v-col>
               </v-row>
-              <v-btn
-                outlined
-                fab
-                x-small
-                v-for="(icon, index) in media"
-                :key="index"
-                color="white"
-                class="mr-3 hidden-md-and-up"
+              <div
+                sm="4"
+                class=" d-flex d-sm-none"
               >
-                <v-img
-                  :src="icon"
-                  width="16"
-                  height="16"
-                  contain
-                ></v-img>
-              </v-btn>
+                <v-btn
+                  outlined
+                  fab
+                  x-small
+                  v-for="(icon, index) in media"
+                  :key="index"
+                  color="white"
+                  class="mr-3 mt-2"
+                >
+                  <v-img
+                    :src="icon"
+                    width="16"
+                    height="16"
+                    contain
+                  ></v-img>
+                </v-btn>
+              </div>
+              <div
+                sm="4"
+                class="buttons d-none d-sm-flex d-md-none"
+              >
+                <v-btn
+                  outlined
+                  fab
+                  large
+                  v-for="(icon, index) in media"
+                  :key="index"
+                  color="white"
+                  class="butmarg "
+                >
+                  <v-img
+                    :src="icon"
+                    width="16"
+                    height="16"
+                    contain
+                    class="butmedia"
+                  ></v-img>
+                </v-btn>
+              </div>
+
             </v-col>
             <v-row
-              no-gutters
-              class="hidden-md-and-up mt-12 pl-10"
+              class="hidden-md-and-up spicon"
               align="end"
               justify="end"
             >
@@ -101,6 +128,7 @@
                 :src="icon.name"
                 :width="icon.size"
                 :height="icon.size"
+                class="iconmob"
                 contain
               ></v-img>
             </v-row>
@@ -170,12 +198,12 @@
                 </v-col>
                 <v-col
                   md="4"
-                  class="index text-center pl-4"
+                  class="index text-center pl-3 mt-2"
                 >
                   <v-btn
                     color="#104EFB"
-                    width="180"
-                    height="60"
+                    width="160"
+                    height="50"
                     style="border-radius:300px"
                     class="white--text but"
                     elevation="4"
@@ -196,57 +224,55 @@
           <v-row
             no-gutters
             justify="center"
+            class="blademob"
+            align="center"
           >
-            <v-col
-              md="8"
-              class="blademob"
+
+            <v-row
+              no-gutters
+              justify="center"
+              class="margtop mr-3"
+              align="center"
             >
-              <v-row
-                no-gutters
-                justify="center"
-                class="mt-6 mr-3"
-              >
-                <v-col
-                  sm="6"
-                  cols="6"
-                  class="index linemob"
-                >
-                  <h2 class="subtitle-2 text-center font-weight-bold white--text">
-                    10$
-                  </h2>
-                  <h2 class="caption text-center white--text">hourly rate</h2>
-                </v-col>
-                <v-col
-                  sm="6"
-                  cols="6"
-                  class="index"
-                >
-                  <h2 class="subtitle-2 text-center font-weight-bold white--text">
-                    35 HOURS
-                  </h2>
-                  <h2 class="caption text-center white--text">
-                    weekly availability
-                  </h2>
-                </v-col>
-              </v-row>
               <v-col
-                cols="12"
-                sm="12"
-                class="index mt-12 text-center"
+                sm="6"
+                cols="6"
+                class="index linemob"
               >
-                <v-btn
-                  color="#104EFB"
-                  x-large
-                  elevation="4"
-                  class="white--text"
-                  width="265"
-                  height="84"
-                  style="border-radius:300px"
-                >
-                  HIRE ME
-                </v-btn>
+                <h2 class="point text-center font-weight-bold white--text">
+                  10$
+                </h2>
+                <h2 class="subpoint text-center white--text">hourly rate</h2>
               </v-col>
+              <v-col
+                sm="6"
+                cols="6"
+                class="index"
+              >
+                <h2 class="point text-center font-weight-bold white--text">
+                  35 HOURS
+                </h2>
+                <h2 class="subpoint text-center white--text">
+                  weekly availability
+                </h2>
+              </v-col>
+            </v-row>
+            <v-col
+              cols="12"
+              sm="12"
+              class="margintop text-center"
+            >
+              <v-btn
+                color="#104EFB"
+                x-large
+                elevation="4"
+                class="white--text butmob"
+                style="border-radius:300px"
+              >
+                HIRE ME
+              </v-btn>
             </v-col>
+
           </v-row>
         </v-col>
       </v-row>
@@ -319,10 +345,10 @@ export default {
       ],
       iconsmob: [
         { name: "/pic/behance_2.svg", size: 18 },
-        { name: "/pic/dribbble_2.svg", size: 16 },
-        { name: "/pic/pinterest_2.svg", size: 16 },
-        { name: "/pic/instagram_2.svg", size: 16 },
-        { name: "/pic/linkedin_2.svg", size: 16 }
+        { name: "/pic/dribbble_2.svg", size: 18 },
+        { name: "/pic/pinterest_2.svg", size: 18 },
+        { name: "/pic/instagram_2.svg", size: 18 },
+        { name: "/pic/linkedin_2.svg", size: 18 }
       ],
       media: ["/pic/message.svg", "/pic/audio.svg", "/pic/video.svg"],
       tabs: [
@@ -402,7 +428,31 @@ section {
 .marg {
   margin-top: 80px;
 }
+.name {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 20px;
+  margin-top: 30px;
+}
+.job {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6) !important;
+
+  margin-top: 15px;
+}
+
 @media only screen and (max-width: 600px) {
+  .butmob {
+    width: 200px !important;
+    height: 60px !important;
+    font-size: 15px !important;
+  }
   section {
     position: relative;
     margin: 0;
@@ -423,18 +473,144 @@ section {
     left: 0;
     opacity: 0.6;
   }
+  .margtop {
+    margin-top: 30px;
+  }
+  .margintop {
+    margin-top: 60px;
+  }
+  .linemob:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    opacity: 0.3;
+    width: 1px;
+    top: -8px;
+    right: 0;
+    z-index: 100;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transform: rotate(180deg);
+  }
+  .spicon {
+    margin-top: 50px;
+    padding-left: 40px;
+    margin-right: 5px !important;
+    margin-left: 5px !important;
+  }
+  .name {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 20px;
+    margin-top: 0px;
+  }
+  .job {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 0px;
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
 }
 @media screen and (max-width: 1360px) {
   .but {
-    width: 150px !important;
+    width: 120px !important;
   }
 }
-@media only screen and (max-width: 1000px) and (min-width: 650px) {
+@media only screen and (max-width: 800px) and (min-width: 700px) {
+  .buttons {
+    margin-left: 250px;
+    margin-right: 30px;
+  }
+  .butmarg {
+    padding: 0px 20px !important;
+    margin: 0 10px !important;
+  }
+  .butmedia {
+    height: 32px !important;
+    width: 32px !important;
+  }
+
+  .name {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 20px;
+    margin-top: 44px;
+    margin-left: -24px;
+  }
+  .job {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-left: -24px;
+    margin-top: 15px;
+  }
+
+  .iconmob {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .profile {
+    margin-top: 16px !important;
+    height: 120px !important;
+    min-width: 120px !important;
+    width: 120px !important;
+  }
+  .spicon {
+    margin-top: 120px;
+    padding-left: 110px;
+    margin-right: 128px !important;
+  }
+  .butmob {
+    width: 350px !important;
+    height: 100px !important;
+    font-size: 30px !important;
+  }
   .v-tabs-slider-wrapper {
     height: 3px !important;
     padding: 0 50px !important;
     left: 0;
     opacity: 0.6;
+  }
+  .margintop {
+    margin-top: 150px;
+  }
+  .point {
+    font-size: 24px;
+    padding: 10px 0;
+  }
+  .subpoint {
+    font-size: 24px;
+    padding: 10px 0;
+  }
+  .margtop {
+    margin-top: 60px;
+  }
+  .blademob:before {
+    content: "";
+    background-color: #104efb;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 210px !important;
+
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 300px;
+    z-index: 1;
+  }
+  .blademob {
+    margin-top: 45px !important;
   }
   .but {
     width: 100px;
@@ -444,20 +620,23 @@ section {
     margin: 0;
     padding: 0;
     top: 0;
-    background: url("/pic/curvedtab.svg");
+    background: url("/pic/ipad.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .backdesign:after {
+
+  .linemob:after {
     content: "";
+    background-color: #fff;
     position: absolute;
-    width: 100%;
-    height: 200px;
-    top: 0;
-    background: url("/pic/backdesign.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
+    opacity: 0.44;
+    width: 1px;
+    top: 0px;
+    right: 0;
+    z-index: 100;
+    height: 90px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: rotate(180deg);
   }
 }
 #curve {
@@ -541,19 +720,6 @@ a {
 .linemob {
   position: relative;
   z-index: 10;
-}
-.linemob:after {
-  content: "";
-  background-color: #fff;
-  position: absolute;
-  opacity: 0.44;
-  width: 1px;
-  top: 0px;
-  right: 0;
-  z-index: 100;
-  height: 50px;
-  border: 1px solid white;
-  transform: rotate(180deg);
 }
 
 .navblade {
